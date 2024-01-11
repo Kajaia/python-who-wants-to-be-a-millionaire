@@ -40,9 +40,9 @@ class Question:
         final_answer = self.get_final_answer(latest_question['answers'], correct_answer_letter)
         if player_answer.lower() == correct_answer_letter.lower():
             Question.can_play = True
-            return f"Hurrayy! Your answer: {correct_answer_letter.upper()} {final_answer} is correct and you get ${self.rewards[self.asked_questions_count-1]}, congratulations!"
+            return f"Hurrayy! Your answer: {correct_answer_letter.upper()} {final_answer} is correct 🦉\nand you get ${self.rewards[self.asked_questions_count-1]}, congratulations! 🤩"
         Question.can_play = False
-        return f"Oh noo, your answer is not correct, this is a correct answer: {correct_answer_letter.upper()} {final_answer}. Game Over! You won nothing :("
+        return f"Oh noo, your answer is not correct 🥺\nthis is a correct answer: {correct_answer_letter.upper()} {final_answer}.\nGame Over! You won nothing 😓"
     
     def get_final_answer(self, question_answers, correct_answer_letter):
         final_answer = ""
